@@ -15,3 +15,15 @@ maps <- read.csv(dosya_isim, sep = ";", header = TRUE)
 
 maps$Latitude<-gsub("N","",as.character(maps$Latitude))
 maps$Latitude<-as.numeric(maps$Latitude)
+
+# 1.4
+
+idx <- grep("W", maps$Longitude)
+
+#1.5
+
+maps$Longitude <- gsub("[EW]", "", maps$Longitude)
+
+#1.6
+
+maps$Year <- gsub("AD", "", maps$Year)
