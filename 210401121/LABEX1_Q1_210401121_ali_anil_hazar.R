@@ -10,3 +10,8 @@ file.exists(dosya_isim)
 
 maps <- read.csv(dosya_isim, sep = ";", header = TRUE)
 
+
+# 1.3
+
+maps$Latitude<-gsub("N","",as.character(maps$Latitude))
+maps$Latitude<-as.numeric(maps$Latitude)
