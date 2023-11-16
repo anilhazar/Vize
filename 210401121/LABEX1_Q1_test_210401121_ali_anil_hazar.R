@@ -43,3 +43,9 @@ test_that("Test : maps adlı data.frame'in ilk sütunu 'City' olmalıdır.", {
   expect_equal(colnames(maps)[1], "City", info = "İlk sütun 'City' değil.")
 })
 
+#2.5
+
+test_that("Test : maps adlı data.frame'in 5. sütununun adında 'Title' kelimesi geçmelidir.", {
+  expect_true(grepl("Title", colnames(maps)[5], fixed = TRUE), info = "5. sütunun adında 'Title' kelimesi geçmiyor.")
+})
+
