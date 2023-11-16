@@ -24,3 +24,10 @@ test_that("Test : MapsThatChangedOurWorld_StoryMap_Data.csv adlı dosya belirtil
   file_path <- file.path(current_dir,"MapsThatChangedOurWorld_StoryMap_Data.csv")
   expect_true(file.exists(file_path), info = "Dosya mevcut değil.")
 })
+
+#2.2
+
+test_that("Test : maps adlı değişken Global Workspace’de mevcuttur.", {
+  expect_true(exists("maps", envir = .GlobalEnv), info = "maps adlı değişken mevcut değil.")
+})
+
