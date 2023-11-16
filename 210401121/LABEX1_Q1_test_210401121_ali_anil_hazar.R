@@ -73,3 +73,9 @@ test_that("Test : idx nesnesinin tipi (class'ı) integer'dir.", {
   expect_is(idx, "integer", info = "idx nesnesinin tipi integer değil.")
 })
 
+#2.10
+
+test_that("Test : Year adlı sütun numeric değerlerden oluşmalıdır.", {
+  expect_is(maps$Year, "numeric", info = "Year sütunu numeric değerlerden oluşmuyor.")
+})
+
